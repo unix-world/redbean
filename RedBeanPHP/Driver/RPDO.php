@@ -949,6 +949,7 @@ class RPDO implements Driver
 	 * @return string
 	 */
 	public function DatabaseServerVersion() {
+		$this->connect();
 		return trim( strval( $this->pdo->getAttribute(\PDO::ATTR_SERVER_VERSION) ) );
 	}
 }
